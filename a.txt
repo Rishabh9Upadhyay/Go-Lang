@@ -1,0 +1,101 @@
+1. Go was ccreated by google in 2007 and been open source in 2009
+
+why Go
+2. Multicore processes
+3. Cloud Infra                              (Infra Improvement)
+4. Big network computation clusters
+
+Infra became scalable & distributed, dynamic, more capacity.
+two threads executes from very begining-----> Multi threading
+
+Go was designed to run on multiple cores and built to support concurrency.
+concurency in Go is cheap and easy.
+
+Go
+A. For performant appliccagtion.
+B. Running on scalled, distributed system.
+
+
+
+2. Charecterstics of Go
+=> Simple and Readable syntax of a dynamically typed language like python.
+=> Efficeancy and safty of a lower level, statically typed language like C++.
+=> Go used in server side or backend side on an application.
+=> backend running on Microservices, web application, database services.
+=> Simple syntax: easy to learn, read and write code. (Easy to mintain over time)
+=> Fast built time, start up, and run.
+=> Go is a compiled language. Go code transfered into machine code by a compiler before it can run on a computer.
+=> Cross plateforms
+
+
+
+GoLand---> IDE to write go application locally in your machine.
+
+
+Packages:
+fmt = Formating for IO.
+os = Operating system interaction.
+time = Time and date utilities.
+net = Networking
+
+
+// fmt.Print() not end with new line
+// fmt.Print() end with new line
+
+
+Data type:
+=> Data types spacify the type of data that can be stored and manipulated by a program.
+=> (Strings, Booleans, Numbers, like Integers, Map, Array)
+
+Array:
+Fixed size (length is part of its type).
+You can’t change the size once created.
+Example:
+var arr [3]int = [3]int{1, 2, 3}
+fmt.Println(arr)  // [1 2 3]
+// arr[3] = 4 // ❌ error: index out of range
+
+
+
+slice:
+Built on top of arrays but dynamic in size.
+You can append elements, and Go handles resizing internally.
+Example:
+slice := []int{1, 2, 3}
+slice = append(slice, 4, 5)
+fmt.Println(slice) // [1 2 3 4 5]
+
+var taskItems = []string{shortGolang, fullGolang, rewardDessert}
+for index, task := range taskItems {
+    fmt.Printf("%d: %s\n", index+1, task)
+}
+
+
+func printTasks(taskItems []string) {
+  fmt.Println("List of my Todos")
+  for index, task := range taskItems {
+	  fmt.Printf("%d: %s\n", index+1, task)
+	  fmt.Printf(index+1, task)
+  }
+}
+
+for -, task := range taskItems
+
+
+package main
+is very important because it tells the Go compiler:
+
+This file belongs to the main package.
+
+A program that has a main package will be compiled as an executable program (not a reusable library).
+
+variable scope is similar to c++
+
+func addTask(taskItems []string, newTask string) []string {
+	var updatedTaskItems = append(taskItems, newTask)
+	return updatedTaskItems
+}
+
+func sum1(num1 int, num2 int, num3 int) int {
+	return num1 + num2 + num3
+}
